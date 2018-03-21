@@ -1,0 +1,23 @@
+Screen Layout: 
+
+-HomeScreen
+-SearchTabNavigator
+    -SearchTab
+    -FavoritesTab
+
+Folder Layout:
+-assets
+    -HomeScreen
+        -home_screen_background.jpg
+
+-Components
+    -Home
+        -HomeScreen.js
+    -Search
+        -TabNavigator
+            -SearchTab.js
+            -FavoritesTab.js
+        -SearchBody.js
+        -SearchFooter.js
+        -SearchHeader.js
+        -SearchTabNavigator.js
