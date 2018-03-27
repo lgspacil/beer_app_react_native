@@ -3,12 +3,20 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Content, ListItem, Container, Header, List } from 'native-base';
 
 
+
 class SearchBody extends Component {
+    static navigationOptions = {
+        header: null
+    }
+
+    pressed = (id) => {
+        this.props.aFunction(id);
+    }
     render() {
-        const drinkList = this.props.drinkData.map(drinkInfo => <ListItem key={drinkInfo.idDrink}><Text>{drinkInfo.strDrink}</Text></ListItem>)
+        const drinkList = this.props.drinkData.map(drinkInfo => <ListItem key={drinkInfo.idDrink} onPress={() => this.pressed({id: drinkInfo.idDrink, name: drinkInfo.strDrink})}><Text>{drinkInfo.strDrink}</Text></ListItem>)
         return (
             <Container>
-                <Header />
+                {/* <Header /> */}
                 <Content>
                     <List>
                         {drinkList}

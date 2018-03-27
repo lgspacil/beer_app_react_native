@@ -41,11 +41,19 @@ class SearchTab extends Component{
 
     }
 
+    testingFunction = (info) => {
+        console.log('testing a funciton!!', info)
+        this.props.navigation.navigate("SpecificDrink", {
+            drinkId: info.id,
+            name: info.name
+        })
+    }
+
     render(){
 
         let searchBody;
         if(this.state.drinkFound === true){
-            searchBody = <SearchBody drinkData={this.state.drinkData}/>
+            searchBody = <SearchBody drinkData={this.state.drinkData} aFunction={this.testingFunction.bind(this)}/>
         }else if(this.state.drinkFound === false){
             alert("Drink not found");
         }

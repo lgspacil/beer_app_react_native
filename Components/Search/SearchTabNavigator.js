@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
-import {
-    View, 
-    Text,
-    StyleSheet
-} from "react-native"
+import {View, Text, StyleSheet} from "react-native"
 import {Footer, FooterTab, Button, Icon} from 'native-base';
 
 import {TabNavigator} from 'react-navigation';
@@ -38,7 +34,15 @@ const SearchTabNavigator = TabNavigator({
 
             </Footer>
         )
-    }
+    },
+    // headerStyle: {
+    //     backgroundColor: '#f4511e',
+    //   },
+    //   headerTintColor: '#fff',
+    //   headerTitleStyle: {
+    //     fontWeight: 'bold',
+    //   },
+
 })
 
 export default SearchTabNavigator;

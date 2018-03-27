@@ -6,7 +6,7 @@ import {
     Image
 } from "react-native"
 import {Button} from 'native-base';
-var backgroundImage = require('../../assets/HomeScreen/home_screen_background.jpg');
+var backgroundImage = require('../../assets/HomeScreen/cocktail.jpg');
 
 class HomeScreen extends Component {
 
@@ -24,8 +24,9 @@ class HomeScreen extends Component {
                 <Button 
                 block = {true}
                 onPress={ () => this.props.navigation.navigate("SearchTabNavigator")}
+                dark = {true}
                 >
-                    <Text style={{color: 'white'}}>Search Beers</Text>
+                    <Text style={{color: 'white'}}>Search Cocktails</Text>
                 </Button>
             </View>
         )
