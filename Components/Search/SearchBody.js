@@ -4,7 +4,7 @@ import { Content, ListItem, Container, Header, List } from 'native-base';
 
 
 
-class SearchBody extends Component {
+class SearchBody extends React.Component {
     static navigationOptions = {
         header: null
     }
@@ -16,7 +16,6 @@ class SearchBody extends Component {
         const drinkList = this.props.drinkData.map(drinkInfo => <ListItem key={drinkInfo.idDrink} onPress={() => this.pressed({id: drinkInfo.idDrink, name: drinkInfo.strDrink})}><Text>{drinkInfo.strDrink}</Text></ListItem>)
         return (
             <Container>
-                {/* <Header /> */}
                 <Content>
                     <List>
                         {drinkList}

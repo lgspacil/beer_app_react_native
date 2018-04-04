@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image } from "react-native";
-import { Content, ListItem, Container, Header, List, Button } from 'native-base';
+import { Content, ListItem, Container, Header, List, Button, Icon } from 'native-base';
 import { Col, Row, Grid } from "react-native-easy-grid";
 import axios from 'axios';
+var storage = require('react-native-local-storage');
 const uuidv1 = require('uuid/v1');
 
-class SpecificDrink extends Component {
+class SpecificDrink extends React.Component {
 
     static navigationOptions = ({ navigation }) => {
         const { params } = navigation.state;
@@ -33,6 +34,12 @@ class SpecificDrink extends Component {
             .catch((err) => {
                 console.log('err ', err);
             })
+    }
+
+    addToFavorites = (name, id) => {
+        alert("added to favorites");
+        storage.save(id, [name, id])
+        console.log("fav", name)
     }
 
 
@@ -84,17 +91,27 @@ class SpecificDrink extends Component {
                             <Image source={{uri: this.state.drinkData.strDrinkThumb}} style={{height: 300, width: 300}} />
                         </ListItem>
                         <List>
-                            <ListItem itemDivider>
-                                <Text>Ingredients</Text>
+                            <ListItem itemDivider style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                                <View>
+                                    <Text>Ingredients</Text>
+                                </View>
+                                <View>
+                                    <Button vertical style={{backgroundColor: "#71879873"}} onPress={() => this.addToFavorites(this.state.drinkData.strDrink, this.state.drinkData.idDrink)}>
+                                        <Icon name="ios-add-outline"/>
+                                        <Text>Add to Favorites</Text>
+                                    </Button>
+                                </View>
                             </ListItem>
-                            <Grid>
-                                <Col>
-                                    {ingredients_view}
-                                </Col>
-                                <Col>
-                                    {measure_view}
-                                </Col>
-                            </Grid>
+                            <ListItem>
+                                <Grid>
+                                    <Col>
+                                        {ingredients_view}
+                                    </Col>
+                                    <Col>
+                                        {measure_view}
+                                    </Col>
+                                </Grid>
+                            </ListItem>
                             <ListItem itemDivider>
                                 <Text>Instructions</Text>
                             </ListItem>
@@ -103,11 +120,6 @@ class SpecificDrink extends Component {
                             </ListItem>
                         </List>
                     </Content>
-        } else {
-            loadedDrink =
-                <View>
-                    <Text>Text</Text>
-                </View>
         }
 
         return (

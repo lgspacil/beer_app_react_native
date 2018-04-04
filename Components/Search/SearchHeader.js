@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSHeet} from "react-native";
-import {Header, Item, Icon, Input} from 'native-base';
+import {Header, Item, Icon, Input, Button, Right} from 'native-base';
 
-class SearchHeader extends Component{
+class SearchHeader extends React.Component{
 
     static navigationOptions = {
         header: null
@@ -10,7 +10,7 @@ class SearchHeader extends Component{
     render(){
         return(
             <Header
-                style={{height: 80}}
+                style={{height: 80, backgroundColor: '#718798'}}
                 searchBar
                 rounded
             >
@@ -19,7 +19,7 @@ class SearchHeader extends Component{
                 <Icon name="ios-search" />
                 <Input
                     placeholder="Enter drink name"
-                    // this.propps is calling onChangeText in the parent
+                    // this.props is calling onChangeText in the parent
                     onChangeText={this.props.onChangeText}
                     returnKeyType="search"
 
@@ -29,8 +29,15 @@ class SearchHeader extends Component{
                 />
             </Item>
 
-
-
+            <Right>
+                    <Button
+                    style={{backgroundColor: '#3b4045', height: 40}}
+                    onPress={this.props.surpriseMe}>
+                    <Icon name='refresh' />
+                    <Text style={{color: 'white'}}>Surprise Me!</Text>
+                    </Button>
+          </Right>
+            
             </Header>
         )
     }

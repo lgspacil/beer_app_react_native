@@ -5,7 +5,7 @@ import SearchHeader from '../SearchHeader';
 import axios from 'axios';
 import SearchBody from '../SearchBody';
 
-class SearchTab extends Component{
+class SearchTab extends React.Component{
 
     static navigationOptions = {
         header: null
@@ -26,6 +26,10 @@ class SearchTab extends Component{
         axios.get(query)
             .then((response) => {
                 console.log('the response is: ', response.data.drinks);
+
+                if(response.data.drinks === null){
+                    this.setState({drinkFound: false});
+                }
 
                 var data = response.data.drinks ? response.data.drinks : false
 
@@ -49,6 +53,32 @@ class SearchTab extends Component{
         })
     }
 
+    surpriseMe = () => {
+        console.log("surprise me")
+        const query = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+
+        axios.get(query)
+            .then((response) => {
+                console.log('the response is: ', response.data.drinks);
+
+                if(response.data.drinks === null){
+                    this.setState({drinkFound: false});
+                }
+
+                var data = response.data.drinks ? response.data.drinks : false
+
+                if(data){
+                    this.setState({
+                        drinkData: data,
+                        drinkFound: true
+                    })
+                }
+            }).catch((err) => {
+                this.setState({drinkFound: false})
+            })
+
+    }
+
     render(){
 
         let searchBody;
@@ -62,9 +92,10 @@ class SearchTab extends Component{
             <Container>
 
                 <SearchHeader 
-                    value={this.state.searchBeer}
+                    value={this.state.searchDrink}
                     onChangeText={(searchDrink) => this.setState({ searchDrink })}
                     drinkSearch={this.drinkSearch}
+                    surpriseMe ={this.surpriseMe}
                     />
 
                 <Content>
