@@ -16,7 +16,7 @@ const SearchTabNavigator = TabNavigator({
             <Footer>
                 <FooterTab>
                     <Button
-                        style={{backgroundColor:"#718798"}}
+                        style={{backgroundColor:"#97eb9a"}}
                         vertical
                         active = {props.navigationState.index === 0}
                         onPress = {() => props.navigation.navigate('SearchTab')}>
@@ -25,7 +25,7 @@ const SearchTabNavigator = TabNavigator({
                     </Button>
 
                     <Button
-                        style={{backgroundColor:"#718798"}}
+                        style={{backgroundColor:"#97eb9a"}}
                         vertical
                         active = {props.navigationState.index === 1}
                         onPress = {() => props.navigation.navigate('FavoritesTab')}>

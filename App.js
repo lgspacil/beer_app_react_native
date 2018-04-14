@@ -13,7 +13,7 @@ const App = StackNavigator({
   initialRouteName: 'HomeScreen',
   navigationOptions: {
     headerStyle: {
-      backgroundColor: '#718798',
+      backgroundColor: 'black',
     },
     headerTintColor: 'white',
     headerTitleStyle: {

@@ -13,7 +13,7 @@ class SearchBody extends React.Component {
         this.props.aFunction(id);
     }
     render() {
-        const drinkList = this.props.drinkData.map(drinkInfo => <ListItem key={drinkInfo.idDrink} onPress={() => this.pressed({id: drinkInfo.idDrink, name: drinkInfo.strDrink})}><Text>{drinkInfo.strDrink}</Text></ListItem>)
+        const drinkList = this.props.drinkData.map(drinkInfo => <ListItem key={drinkInfo.idDrink} onPress={() => this.pressed({id: drinkInfo.idDrink, name: drinkInfo.strDrink})}><Text style={{fontWeight: 'bold', color: '#97eb9a'}} >{drinkInfo.strDrink}</Text></ListItem>)
         return (
             <Container>
                 <Content>

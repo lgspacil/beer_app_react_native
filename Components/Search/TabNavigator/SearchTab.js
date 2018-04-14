@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Keyboard} from "react-native";
+import {View, Text, StyleSheet, Keyboard, Image, StatusBar} from "react-native";
 import {Container, Content} from 'native-base';
 import SearchHeader from '../SearchHeader';
 import axios from 'axios';
 import SearchBody from '../SearchBody';
+var backgroundImage = require('../../../assets/HomeScreen/cocktail.jpg');
 
 class SearchTab extends React.Component{
 
@@ -90,6 +91,10 @@ class SearchTab extends React.Component{
 
         return(
             <Container>
+                <StatusBar hidden />
+                <View style={{position:'absolute', top:0, left:0, height:'100%', width:'100%'}}>
+                    <Image source={backgroundImage} style={{flex:1, height:null, width:null}} />
+                </View>
 
                 <SearchHeader 
                     value={this.state.searchDrink}
@@ -107,5 +112,13 @@ class SearchTab extends React.Component{
         )
     }
 }
+
+const styles = StyleSheet.create({
+    homeScreenView: {
+        flex: 1,
+        justifyContent: 'flex-end'
+    }
+})
+
 
 export default SearchTab

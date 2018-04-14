@@ -10,7 +10,7 @@ class SearchHeader extends React.Component{
     render(){
         return(
             <Header
-                style={{height: 80, backgroundColor: '#718798'}}
+                style={{height: 80, backgroundColor: 'black'}}
                 searchBar
                 rounded
             >
