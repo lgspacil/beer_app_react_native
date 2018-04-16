@@ -3,21 +3,57 @@
 
     <item
         is-multidex="false"
-        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_9a70f50dc71dc761051600737df6d326d5a13d00.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
         <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_fcb61a16ac870a3ac2131fa8b4c389c05da05838.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_9f9cf77ebcdda6fd148facfe88f3d72412f96595.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_4e6df42a5994ff0156771d45153196b48276ad15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_7534e2b6fd3f73cba1432f4725aa0bf4d79080a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_37816be44f370d915305ffc521ebaf78164b8785.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_9a70f50dc71dc761051600737df6d326d5a13d00.jar" />
     </item>
     <item
         is-multidex="false"
@@ -75,15 +111,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_9f9cf77ebcdda6fd148facfe88f3d72412f96595.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -129,15 +156,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_4e6df42a5994ff0156771d45153196b48276ad15.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/jars/libs/infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"
@@ -156,15 +174,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_7534e2b6fd3f73cba1432f4725aa0bf4d79080a3.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -180,15 +189,6 @@
         revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
         <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_c4feed3d2dd1c8b1888bacdb8fed925c26c9692e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_37816be44f370d915305ffc521ebaf78164b8785.jar" />
     </item>
     <item
         is-multidex="false"
