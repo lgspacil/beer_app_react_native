@@ -2,5 +2,9 @@
     {
         "merged": "/Users/lucasspacil/Desktop/beerApp/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
         "source": "/Users/lucasspacil/Desktop/beerApp/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/lucasspacil/Desktop/cocktail_app_react_native/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/lucasspacil/Desktop/cocktail_app_react_native/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     }
 ]
