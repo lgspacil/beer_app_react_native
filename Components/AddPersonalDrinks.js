@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSHeet } from "react-native";
-import { Content, ListItem, Container, Header, List, Button, Icon } from 'native-base';
+import { Content, ListItem, Container, Header, List, Button, Icon, Form, Item, Input } from 'native-base';
 
 
 class AddPersonalDrinks extends Component {
 
     state = {
-        drinkInfo: null
+        drinkInfo: null,
+        drinkName: ''
 
     }
 
 
     render() {
         return (
-            <View>
-                <Text>Add personal drinks</Text>
-            </View>
+            <Container>
+                <Header />
+                <Content>
+                    <Form>
+                        <Text> {this.state.drinkName}</Text>
+                        <Item>
+                            <Input 
+                            onChangeText={(text) => this.setState({drinkName: text})}
+                            placeholder="Drink Name" />
+                        </Item>
+                        <Item last>
+                            <Input placeholder="Ingredients" />
+                        </Item>
+                    </Form>
+                </Content>
+            </Container>
 
         )
     }

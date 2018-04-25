@@ -14,8 +14,8 @@ const App = StackNavigator({
   FavoriteDrinkScreen: {screen: FavoriteDrinkScreen},
   AddPersonalDrinksScreen: {screen: AddPersonalDrinksScreen}
 }, {
-  // initialRouteName: 'HomeScreen',
-  initialRouteName: 'FavoriteDrinkScreen',
+  initialRouteName: 'HomeScreen',
+  // initialRouteName: 'FavoriteDrinkScreen',
   navigationOptions: {
     headerStyle: {
       backgroundColor: 'black',
