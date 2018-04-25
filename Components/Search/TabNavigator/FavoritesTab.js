@@ -1,28 +1,43 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSHeet, StatusBar, Image} from "react-native";
+import React, { Component } from 'react';
+import { View, Text, StyleSHeet, StatusBar, Image, Alert } from "react-native";
 var storage = require('react-native-local-storage');
 import { Content, ListItem, Container, Header, List, Button, Fab, Icon } from 'native-base';
 const uuidv1 = require('uuid/v1');
 var backgroundImage = require('../../../assets/HomeScreen/cocktail.jpg');
 
-var active ='true'
+var active = 'true'
+var self;
 
-class FavoritesTab extends Component{
+class FavoritesTab extends Component {
+
+    constructor(props) {
+        super(props);
+        self = this
+    }
 
     state = {
         favoriteDrinkInfo: [],
-        favoriteDrinkID : null,
+        favoriteDrinkID: null,
         active: 'true'
 
     }
 
     static navigationOptions = {
         headerRight: <View style={{ flex: 1 }}>
-      </View>
+            <Icon
+                onPress={() => {
+                    self.props.navigation.navigate("AddPersonalDrinksScreen")
+                }}
+                style={{ color: 'white', marginRight: 20 }} name="add" />
+        </View>
 
     }
 
-    componentWillMount = () =>{
+    addDrinks = () => {
+        console.log('you are adding drinks')
+    }
+
+    componentWillMount = () => {
         this.loadDrinks();
     }
 
@@ -30,13 +45,13 @@ class FavoritesTab extends Component{
         console.log('RELOAD DRINKS')
         storage.getAllKeys().then((data) => {
             console.log("getting the data", data)
-            this.setState({favoriteDrinkID: data})
+            this.setState({ favoriteDrinkID: data })
 
             var array = [];
-            for(var i = 0; i < data.length; i++){
+            for (var i = 0; i < data.length; i++) {
                 storage.get(data[i]).then((info) => {
                     array.push(info)
-                    this.setState({favoriteDrinkInfo: array})
+                    this.setState({ favoriteDrinkInfo: array })
                 })
             }
         })
@@ -46,7 +61,7 @@ class FavoritesTab extends Component{
     clear = () => {
         console.log('sup!')
         storage.clear();
-        
+
     }
 
     goToDrink = (info) => {
@@ -72,25 +87,25 @@ class FavoritesTab extends Component{
         })
     }
 
-    render(){
+    render() {
 
-        const favoriteDrinkList = this.state.favoriteDrinkInfo.map(drinkInfo => 
+        const favoriteDrinkList = this.state.favoriteDrinkInfo.map(drinkInfo =>
             <ListItem
                 key={uuidv1()}
                 onPress={() => this.goToDrink({ name: drinkInfo[0], id: drinkInfo[1] })}
-                style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
-                <Text style={{fontWeight: 'bold', color: '#97eb9a'}}>{drinkInfo[0]}</Text>
+                style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <Text style={{ fontWeight: 'bold', color: '#97eb9a' }}>{drinkInfo[0]}</Text>
                 <Button iconLeft transparent onPress={() => this.deleteDrink(drinkInfo[1])}>
-                    <Icon name='trash' color='#97eb9a'/>
-                    <Text style={{fontWeight: 'bold', color: '#97eb9a'}}>Delete</Text>
+                    <Icon name='trash' color='#97eb9a' />
+                    <Text style={{ fontWeight: 'bold', color: '#97eb9a' }}>Delete</Text>
                 </Button>
             </ListItem>)
-        return(
+        return (
 
             <Container>
                 <StatusBar backgroundColor="black" />
-                <View style={{position:'absolute', top:0, left:0, height:'100%', width:'100%'}}>
-                    <Image source={backgroundImage} style={{flex:1, height:null, width:null}} />
+                <View style={{ position: 'absolute', top: 0, left: 0, height: '100%', width: '100%' }}>
+                    <Image source={backgroundImage} style={{ flex: 1, height: null, width: null }} />
                 </View>
                 <Content>
                     <List>
