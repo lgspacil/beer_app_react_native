@@ -15,7 +15,8 @@ class SearchTab extends React.Component{
     state = {
         searchDrink:'',
         drinkData: {},
-        drinkFound: null
+        drinkFound: null,
+        alert: ''
     }
 
     drinkSearch = () => {
@@ -86,7 +87,8 @@ class SearchTab extends React.Component{
         if(this.state.drinkFound === true){
             searchBody = <SearchBody drinkData={this.state.drinkData} aFunction={this.testingFunction.bind(this)}/>
         }else if(this.state.drinkFound === false){
-            alert("Drink not found");
+            // alert("Drink not found");
+            searchBody = <Text style={{fontWeight: 'bold', color: '#97eb9a'}} >Drink Not Found</Text>
         }
 
         return(
